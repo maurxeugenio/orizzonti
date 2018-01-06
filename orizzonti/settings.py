@@ -54,7 +54,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = (
-    'orizzonti.localhost',
+    'maurxeugenio.github.io/orzzti',
 )
 
 ROOT_URLCONF = 'orizzonti.urls'
