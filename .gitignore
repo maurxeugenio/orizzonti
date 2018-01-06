@@ -1,0 +1,3 @@
+setting.py
+*.pyc
+db.sqlite3

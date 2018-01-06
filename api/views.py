@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 
 from rest_framework.views import APIView
 from rest_framework import status
@@ -7,7 +7,7 @@ from .serializer import ContactSerializer
 # Create your views here.
 
 def home(request):
-    return HttpResponse('Orizzonti RestAPI.')
+    return render(request, 'index.html', {})
 
 class ContactView(APIView):
     serializer_class = ContactSerializer

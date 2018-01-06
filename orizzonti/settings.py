@@ -53,20 +53,21 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-# CORS_ORIGIN_ALLOW_ALL = True
-CORS_ORIGIN_WHITELIST = (
-    'https://maurxeugenio.github.io/orzzti/',
-)
-CORS_ALLOW_HEADERS = (
-    'content-type',
-)
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = (
+#     'http://orizzonti.localhost',
+#     'https://maurxeugenio.github.io/orzzti/',
+# )
+# CORS_ALLOW_HEADERS = (
+#     'content-type',
+# )
 
 ROOT_URLCONF = 'orizzonti.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
