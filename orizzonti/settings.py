@@ -54,6 +54,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = (
+    'https://maurxeugenio.github.io/',
     'https://maurxeugenio.github.io/orzzti/',
 )
 
