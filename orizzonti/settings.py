@@ -53,7 +53,10 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = (
+    'https://maurxeugenio.github.io/orzzti/',
+)
 CORS_ALLOW_HEADERS = (
     'content-type',
 )
