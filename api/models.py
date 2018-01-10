@@ -16,8 +16,3 @@ class Contact(models.Model):
     class Meta:
         verbose_name = 'contato'
         verbose_name_plural = 'contatos'
-
-    def save(self):
-        super(Contact, self).save()
-        new_contact(self.__str__())
-        super(Contact, self).save()
