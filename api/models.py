@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
+from .doodle import new_contact
 
 class Contact(models.Model):
     name = models.CharField(_('nome completo'), max_length=40)
@@ -15,3 +16,8 @@ class Contact(models.Model):
     class Meta:
         verbose_name = 'contato'
         verbose_name_plural = 'contatos'
+
+    def save(self):
+        super(Contact, self).save()
+        new_contact(self.__str__())
+        super(Contact, self).save()
